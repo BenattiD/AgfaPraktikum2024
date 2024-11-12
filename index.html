@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<style>
+		img{
+			height:50%;
+		}
+		h1{
+			color:blue;
+		}
+		#Werbung{
+			position:absolute;
+			top:100px;
+			left:900px;
+			border: red 20px solid;
+			animation: blink 0.1s;
+			animation-iteration-count:30;
+	
+		}
+		@keyframes blink { 10% { 
+				border-color:white;
+			}}
+		</style>
+		<script>
+		function bewegen(element ){
+			hoehe=document.getElementById('Werbung').height;
+			element.style.height = hoehe*0.95;
+			element.style.top=Math.random()*500;
+			
+			element.style.left=Math.random()*500;
+			if(hoehe < 60){
+				alert ("Box ist zu klein");
+			}
+		}
+		
+		</script>
+	</head>
+	<body>
+		<h1 > Meine Berufspraktischen Tage bei Agfa </h1>
+		
+		<span> Ich habe einige Meeting besucht und habe verschiedene Röntgenbilder angeschaut.Zusätzlich haben wir einen Bug in der Applikation getestet.</span>
+		<br/>
+		<br/>
+		<br/>
+		<img id="Werbung" src="https://www.mri-roentgen.ch/media/images/Roentgen-Thorax-dv.width-510.jpg" onmousemove="bewegen(this);" />
+		
+		<img src="image.png" onclick="alert('YOU HAVE A VIRUS!!!!');" />
+
+	</body>
+</html>
